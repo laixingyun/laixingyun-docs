@@ -25,7 +25,7 @@ jobs:
           npm install         # 或者使用 pnpm install / yarn install
 
       - name: Build Vitepress
-        run: npm docs:build   # 假设你的构建命令是 "docs:build"，根据你的实际情况调整
+        run: npm run docs:build   # 假设你的构建命令是 "docs:build"，根据你的实际情况调整
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
