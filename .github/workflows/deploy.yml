@@ -18,20 +18,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'  # 使用 Node.js 20 (Vitepress 支持的版本)
-          cache: 'pnpm'       # 如果你使用 pnpm，可以缓存它
+          cache: 'npm'       # 如果你使用 pnpm，可以缓存它
 
       - name: Install dependencies
         run: |
-          npm install -g pnpm  # 如果使用 pnpm
-          pnpm install         # 或者使用 npm install / yarn install
+          npm install         # 或者使用 pnpm install / yarn install
 
       - name: Build Vitepress
-        run: pnpm docs:build   # 假设你的构建命令是 "docs:build"，根据你的实际情况调整
+        run: npm docs:build   # 假设你的构建命令是 "docs:build"，根据你的实际情况调整
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/.vitepress/dist  # Vitepress 默认输出目录
-          # 如果你修改了 Vitepress 的输出目录，请相应调整
-          keep_files: false  # 设置为 true 如果你想保留之前的文件
