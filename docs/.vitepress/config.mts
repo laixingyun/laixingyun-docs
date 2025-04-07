@@ -1,10 +1,8 @@
 import { defineConfig } from 'vitepress'
 
-
-const base = "/";
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/laixingyun-docs/",
   title: "莱星云",
   description: "A VitePress Site",
   themeConfig: {
