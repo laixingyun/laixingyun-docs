@@ -1,5 +1,8 @@
 import { defineConfig } from 'vitepress'
 
+
+const base = "/";
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "莱星云",
