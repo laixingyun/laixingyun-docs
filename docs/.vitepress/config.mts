@@ -2,7 +2,6 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/laixingyun-docs/",
   title: "莱星云",
   description: "A VitePress Site",
   themeConfig: {
