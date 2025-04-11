@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "莱星云官方文档"
-  text: "莱星云官方文档"
+  name: "莱星云"
+  text: "边缘计算基础重构者"
   tagline: My great project tagline
   actions:
     - theme: brand
